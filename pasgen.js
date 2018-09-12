@@ -41,18 +41,15 @@ const chars= [
     [ "z" ]
 ];
 const num = '0123456789';
-const sym = '!@#$%^&*=-_';
 
 const charNum = document.getElementById("charNum");
 const numBox = document.getElementById("num");
-const symBox = document.getElementById("sym");
 const submit = document.getElementById("submit");
 const yourPw = document.getElementById("yourPw");
 
 submit.addEventListener("click",function(e){
     let characters = chars;
     (numBox.checked) ? characters += num : '';
-    (symBox.checked) ? characters += sym : '';
     yourPw.value = pas(charNum.value, characters);
 });
 
